@@ -16,27 +16,27 @@ ul {
   list-style-type: none;
 }
 
-/* *Task-01* */
+/* *Task-01* categories */
 #categories {
   padding: 0;
   margin: 0;
 }
 .item {
   border-radius: 8px;
-width: 392px;
-background-color: #f6f6fe;;
-margin: 24px;
-padding: 16px;
+  width: 392px;
+  background-color: #f6f6fe;;
+  margin: 24px;
+  padding: 16px;
 }
 h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-font-size: 24px;
-line-height: 1.33;
-letter-spacing: 0.04em;
-color: #2e2f42;
-margin-bottom: 16px;
-margin-top: 0;
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-bottom: 16px;
+  margin-top: 0;
 }
 .item > ul {
   padding: 0;
@@ -44,10 +44,10 @@ margin-top: 0;
 .item > ul > li {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: 0.04em;
-color: #2e2f42;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
   border: 1px solid #808080;
   border-radius: 4px;
   padding: 8px 16px;
@@ -57,7 +57,7 @@ color: #2e2f42;
   margin-bottom: 0;
 }
 
-/* *Task-02* */
+/* *Task-02* images*/
 .gallery {
   max-width: 1128px;
   margin: 0 auto;
@@ -74,4 +74,56 @@ color: #2e2f42;
   height: 300px;
   object-fit: cover;
 }
+
+/* *Task-03* text in input */
+/* *Task-04* form */
+.login-form {
+  display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+flex-direction: column;
+gap: 16px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+input {
+  width: 360px;
+  height: 40px;
+  margin-top: 8px;
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+input:hover {
+  border-color: #000;
+}
+button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #4e75ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+button:hover,
+button:focus {
+  background-color: #6c8cff;
+}
+/* *Task-05* */
+/* *Task-06* */
+
 
