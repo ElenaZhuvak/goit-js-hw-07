@@ -66,8 +66,6 @@ h2 {
   gap: 48px 24px;
   padding: 0;
 }
-.gallery-item {
-}
 .gallery-image {
   display: block;
   width: 360px;
@@ -76,6 +74,7 @@ h2 {
 }
 
 /* *Task-03* text in input */
+
 /* *Task-04* form */
 .login-form {
   display: flex;
