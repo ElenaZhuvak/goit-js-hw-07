@@ -155,5 +155,10 @@ button:focus {
   border-radius: 8px;
   padding: 32px;
 }
+.box-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
 
 

@@ -6,8 +6,8 @@ const btnCreate = document.querySelector('button[data-create]');
 console.log(btnCreate);
 const btnDestroy = document.querySelector('button[data-destroy]');
 console.log(btnDestroy);
-const boxes = document.querySelector('#boxes');
-console.log(boxes);
+const boxContainer = document.querySelector('#boxes');
+console.log(boxContainer);
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -15,25 +15,36 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-
-btnCreate.addEventListener('click', setInput)
-
-function setInput(amount) {
-  if (amount <= 100) {
+btnCreate.addEventListener('click', onBtnCreateClick);
+function onBtnCreateClick() {
+  const amount = Number.parseInt(input.value.trim());
+  console.log(amount);
+  if (amount >=1 && amount <= 100) {
     createBoxes(amount);
     input.value = '';
+  } else {
+    alert (`Кількість квадратів не задовольняє умові`);
   }
 }
 
 function createBoxes(amount) {
-  for (let i = 0; i <= amount; i++) {
-    const div = document.createElement('div');
-    let size = 30;
-    div.style.width = size += 10;
-    div.style.height = size += 10;
-    div.style.backgroundColor = getRandomHexColor();
+  const collection = [];
 
-    return boxes.append('div')
+  for (let i = 0; i < amount; i++) {
+    const boxes = document.createElement('div');
+    boxes.style.width = `${30 + i * 10}px` ;
+    boxes.style.height = `${30 + i * 10}px` ;
+    boxes.style.backgroundColor = getRandomHexColor();
+    boxes.classList.add("box-item");
+    collection.push(boxes);
+    boxContainer.append(...collection);
   }
 }
-btnCreate.addEventListener('click', createBoxes)
+
+btnDestroy.addEventListener('click', destroyBoxes)
+function destroyBoxes () {
+  boxContainer.innerHTML = '';
+}
+
+
+
