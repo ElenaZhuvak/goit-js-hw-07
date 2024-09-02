@@ -159,6 +159,7 @@ button:focus {
   display: flex;
   flex-wrap: wrap;
   margin: 20px;
+  border-radius: 3px;
 }
 
 

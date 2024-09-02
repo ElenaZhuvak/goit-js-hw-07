@@ -20,6 +20,7 @@ function onBtnCreateClick() {
   const amount = Number.parseInt(input.value.trim());
   console.log(amount);
   if (amount >=1 && amount <= 100) {
+    destroyBoxes();
     createBoxes(amount);
     input.value = '';
   } else {
@@ -28,7 +29,6 @@ function onBtnCreateClick() {
 }
 
 function createBoxes(amount) {
-  const collection = [];
 
   for (let i = 0; i < amount; i++) {
     const boxes = document.createElement('div');
@@ -36,8 +36,7 @@ function createBoxes(amount) {
     boxes.style.height = `${30 + i * 10}px` ;
     boxes.style.backgroundColor = getRandomHexColor();
     boxes.classList.add("box-item");
-    collection.push(boxes);
-    boxContainer.append(...collection);
+    boxContainer.append(boxes);
   }
 }
 
